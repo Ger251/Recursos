@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+}
+
+.contendor-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  
+
+}
+
+.slider {
+  height:80vh;
+  width: 300%;
+  display: flex;
+  margin-left: -100%;
+}
+
+.slider-section {
+  width: 100%;
+ 
+}
+
+.slider-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(175, 175, 170);
+  top: 50%;
+  transform: translatey(-50%);
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__btn--derecha {
+  right: 10px;
+}
+.slider__btn--izquierda {
+  left: 10px;
+}
+
+.letra-Slider {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif Black;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  position: absolute;
+  width: 30%;
+  margin-top: 3%;
+  margin-left: 35%;
+  
+ 
+}
+
+.letra1-Slider {
+  color: rgb(252, 246, 243);
+  text-align: center;
+  text-decoration: beige;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 23%;
+
+  border-style: solid;
+  border-color: rgb(252, 246, 243);
+  border-radius: 20px;
+  border-width: 1px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  
+}
+
+.letra1-Slider:hover {
+  color: rgb(99, 178, 247);
+  transform: scale(1.2);
+}
+
+@media (max-width: 840px)   {
+  .letra-Slider {
+    
+    
+    display: none;
+
+
+  }
+  .letra1-Slider {
+    display: none;
+  }
+}
+
+
+/*DESDE ACA NUEVO**/
+
+.section-1{
+  border: 1px solid rgb(248, 34, 44);
+  width:100%;
+  height: 60vh;
+ 
+  
+
+}
+.contenedor-carrusel{
+  border: 1px solid rgb(20, 29, 28);
+
+  position: relative;
+  display: flex;
+  
+  justify-content: center;
+
+}
+.carrusel{
+  position: relative;
+  width: max-content;
+  height: 50vh;
+  justify-content: center;
+  border: 1px solid rgb(30, 189, 168);
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.carrusel li{
+  position: absolute;
+  list-style-type: none;
+  width: max-content;
+  opacity: 0;
+ 
+  transition: opacity .7s;
+  border: 1px solid rgb(89, 196, 18);
+}
+.carrusel li img{
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border: 1px solid rgb(68, 16, 165);
+
+}
+.carrusel li:first-child{
+  opacity: 1;
+}
+
+.carrusel li:target {
+  opacity: 1;
+}
+
+
+
+
+.menu{
+  display: flex;
+  list-style-type: none;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 280px;
+  bottom: 30px;
+  border: 1px solid red;
+  height: 3px;
+  
+}
+.menu li a{ 
+ list-style-type: none;
+ 
+  background-color: aliceblue;
+ padding-left: 60px;
+ padding-top: 0.5px;
+ margin: 5px;
+
+ 
+}
+
+
+/*----------------------------------PROBANDO 3ER -----------------------------*/
+
+
+
+.whatsapp{
+  height: 50px;
+  width: 50px;
+ 
+  position: fixed;
+  right: 20px;
+ bottom: 30px;
+}
+.whatsapp  img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/*---------------------Nuevo Carrusel 3d solo CSS----------------------------*/
+ .section-2{
+  background-color: rgb(137, 187, 170);
+ margin: 0;
+ }
+ .titulo{
+ 
+  color: #dac9c9;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding: 30px;
+  margin-top: 15px;
+  }
+
+ .section-2-contendor-slider{
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: auto;
+
+ }
+ 
+.section-2-contendor{
+
+ transform-style: preserve-3d;
+ width: 100%;
+ height: 500px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.section-2-cartas{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+ 
+ 
+}
+
+.section-2-carta{
+  width: 60%;
+  height: 95%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+.section-2-cartas img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.section-2-contendor input{
+  display: none;
+}
+
+/*-------------EL CODIGO DE LA MAGIA-----------------*/
+
+#item-slider-2:checked ~ .section-2-cartas #selector-1,
+#item-slider-1:checked ~ .section-2-cartas #selector-3,
+#item-slider-3:checked ~ .section-2-cartas #selector-2{
+  transform: translateX(-30%) scale(0.8);
+  z-index: 0;
+  opacity: 0.6;
+}
+#item-slider-3:checked ~ .section-2-cartas #selector-1,
+#item-slider-1:checked ~ .section-2-cartas #selector-2,
+#item-slider-2:checked ~ .section-2-cartas #selector-3{
+  transform: translateX(30%) scale(0.8);
+  z-index: 0;
+  opacity: 0.6;
+}
+#item-slider-1:checked ~ .section-2-cartas #selector-1,
+#item-slider-2:checked ~ .section-2-cartas #selector-2,
+#item-slider-3:checked ~ .section-2-cartas #selector-3{
+  transform: translateX(0%) scale(1);
+  z-index: 1;
+}
